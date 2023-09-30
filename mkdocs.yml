@@ -11,6 +11,8 @@ extra:
 
 nav:
   - Introduction: index.md
+  - C#: csharp-tour.md
+  - .Net: dotnet.md
 
 plugins:
   - search
@@ -23,6 +25,7 @@ theme:
   features:
     - navigation.top
     - navigation.indexes
+    - navigation.path
   icon:
     repo: fontawesome/brands/github
   palette:
@@ -42,6 +45,7 @@ theme:
       accent: green
 
 markdown_extensions:
+  - abbr
   - admonition
   - pymdownx.details
   - pymdownx.superfences
@@ -56,4 +60,9 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.snippets:
       base_path:
-        ["material/poo", "material/functional", "material/generalities"]
+        [
+          "includes",
+          "material/poo",
+          "material/functional",
+          "material/generalities",
+        ]
