@@ -40,3 +40,14 @@ On peut voir un framework comme une librairie dont l'usage est structurant dans 
 -   Types utilitaires: System.Net.Http.HttpClient, System.IO.FileStream, etc.
 -   Data types, such as System.Data.DataSet, and System.Data.Entity.DbSet.
 -   High-performance types, such as System.Span<T>, System.Numerics.Vector, and Pipelines
+
+## Langages du .Net
+
+-   .Net supporte officiellement C# et F#
+-   F# : langage fonctionnel pure développé par Microsoft
+-   C# : langage de programmation développé par Microsoft (inspiré de Java et C++ à la base et s’inspire encore d’autres langages)
+-   Le langage C# est le plus utilisé en .net
+
+## Collections
+
+## Programmation asynchrone

@@ -12,7 +12,11 @@ extra:
 nav:
   - Introduction: index.md
   - C#: csharp-tour.md
+  - Exercices C#: csharp-exercices.md
   - .Net: dotnet.md
+  - ASP.Net: asp-dot-net.md
+  - Devoirs:
+      - Jeu avec Monogame: devoir-monogame.md
 
 plugins:
   - search
@@ -59,10 +63,5 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.snippets:
-      base_path:
-        [
-          "includes",
-          "material/poo",
-          "material/functional",
-          "material/generalities",
-        ]
+      auto_append:
+        - "includes/abbreviations.md"
