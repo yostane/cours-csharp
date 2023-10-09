@@ -63,5 +63,6 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.snippets:
+      base_path: ["includes", "material/csharp"]
       auto_append:
-        - "includes/abbreviations.md"
+        - "abbreviations.md"

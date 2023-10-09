@@ -27,6 +27,12 @@ Nous allons faire un tour du langage C# sans forcément tout couvrir car le lang
     - Le nom d’une classe commence par une majuscule
 - C# supporte la null safety: permet d'avertir ou d'interdire la manipulation de valeurs nulles sans précaution préalable de la part du codeur.
 
+```cs
+--8<--
+tour.cs
+--8<--
+```
+
 ## Programmation orienté objet
 
 - Le programme est vu comme un ensemble d'objets qui interagissent entre eux.
