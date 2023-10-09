@@ -5,13 +5,15 @@
     - Activer la null safety
     - Ne pas utiliser les fonctions de tri de .Net
 
+## Enonces
+
 1. Ecrire un programme qui affiche un nombre aléatoire en utilisant la classe `Random`. Voir un [exemple ici](https://learn.microsoft.com/en-us/dotnet/api/system.random?view=net-7.0#examples)
 1. Ecrire une fonction qui génère 2 entiers pseudo-aléatoires entre 0 et 50 et les affiche dans l'ordre croissant
 1. Ecrire une fonction qui génère 3 entiers pseudo-aléatoires entre 0 et 50 et les affiche dans l'ordre croissant
 1. Ecrire une fonction qui génère des entiers pseudo-aléatoires entre 10 et 20 et s'arrête lorsque le premier nombre généré apparaît une seconde fois
 1. Ecrire un programme qui génère un nombre de départ entre 0 et 9, et qui ensuite écrit la table de multiplication de ce nombre, présentée comme suit (cas du nombre 5).
     - ![table mult](img/table_mult.png)
-1. Ecrire un programme qui génère un tableau 2D éparse de 4 lignes. Pour chaque ligne, le nombre de colonnes est un nombre pseudo-aléatoire. Remplir cette matrice par des nombres pseudo-aléatoires de valeur max 999
+1. Ecrire un programme qui génère un tableau 2D épars de 4 lignes. Pour chaque ligne, le nombre de colonnes est un nombre pseudo-aléatoire. Remplir cette matrice par des nombres pseudo-aléatoires de valeur max 999
     - Afficher cette matrice comme sur excel. Conseil: utiliser la méthode `PadRight`
 1. Ecrire un programme qui génère deux tableaux de tailles pseudo-aléatoires et de contenus pseudo-aléatoires. Calculer le schtroumpf des deux tableaux et afficher le détail. Les nombres aléatoires sont compris entre 0 et 10.
     - Pour calculer le schtroumpf, il faut multiplier chaque élément du tableau 1 par chaque élément du tableau 2, et additionner le tout.
@@ -42,3 +44,13 @@
     1. Utiliser LINQ pour calculer le nombre de cercles dans la liste
     1. Utiliser LINQ pour calculer le nombre de rectangles dont la superficie est > 10
     1. Utiliser LINQ pour calculer la circonférence moyenne des cercles (astuce: méthode average)
+
+## Corrections
+
+- Les corrections sont disponibles ci-dessous ainsi qu'en [suivant ce lien](https://gist.github.com/yostane/9b9906b0c820460214400a2802b89276)
+
+```cs title="exos de 1 à 5"
+--8<--
+ex1_5.cs
+--8<--
+```
