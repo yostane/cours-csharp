@@ -1,10 +1,11 @@
-# Exercices en C#
+# Exercices
 
 !!! warning "Consignes"
 
     - Activer la null safety
     - Ne pas utiliser les fonctions de tri de .Net
 
+1. Ecrire un programme qui affiche un nombre aléatoire en utilisant la classe `Random`. Voir un [exemple ici](https://learn.microsoft.com/en-us/dotnet/api/system.random?view=net-7.0#examples)
 1. Ecrire une fonction qui génère 2 entiers pseudo-aléatoires entre 0 et 50 et les affiche dans l'ordre croissant
 1. Ecrire une fonction qui génère 3 entiers pseudo-aléatoires entre 0 et 50 et les affiche dans l'ordre croissant
 1. Ecrire une fonction qui génère des entiers pseudo-aléatoires entre 10 et 20 et s'arrête lorsque le premier nombre généré apparaît une seconde fois
