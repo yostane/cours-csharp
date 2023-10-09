@@ -9,7 +9,8 @@
 1. Ecrire une fonction qui génère 2 entiers pseudo-aléatoires entre 0 et 50 et les affiche dans l'ordre croissant
 1. Ecrire une fonction qui génère 3 entiers pseudo-aléatoires entre 0 et 50 et les affiche dans l'ordre croissant
 1. Ecrire une fonction qui génère des entiers pseudo-aléatoires entre 10 et 20 et s'arrête lorsque le premier nombre généré apparaît une seconde fois
-1. Ecrire un programme qui génère un nombre de départ entre 0 et 9, et qui ensuite écrit la table de multiplication de ce nombre, présentée comme suit (cas du nombre 5) :
+1. Ecrire un programme qui génère un nombre de départ entre 0 et 9, et qui ensuite écrit la table de multiplication de ce nombre, présentée comme suit (cas du nombre 5).
+    - ![table mult](img/table_mult.png)
 1. Ecrire un programme qui génère un tableau 2D éparse de 4 lignes. Pour chaque ligne, le nombre de colonnes est un nombre pseudo-aléatoire. Remplir cette matrice par des nombres pseudo-aléatoires de valeur max 999
     - Afficher cette matrice comme sur excel. Conseil: utiliser la méthode `PadRight`
 1. Ecrire un programme qui génère deux tableaux de tailles pseudo-aléatoires et de contenus pseudo-aléatoires. Calculer le schtroumpf des deux tableaux et afficher le détail. Les nombres aléatoires sont compris entre 0 et 10.
