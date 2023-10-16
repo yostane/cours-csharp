@@ -27,6 +27,20 @@
     - `IsPalindrome(12321)` -> true
     - `IsPalindrome(1221)` -> true
     - `IsPalindrome(1)` -> true
+1. Modélisation des pièce d'un ordinateur avec les classes.
+    - Chaque pièce élétronique d'un ordinateur est de type `ComputerPiece` et est définie par un prix et une consommation en watts.
+    - Définir la classe `ComputerPiece` de telle façon à ce que l'on ne peut pas l'instancier.
+    - Nous souhaitons modéliser une classe `CPU` qui est une sorte de `ComputerPiece` avec une vitesse d'horloge et un nombre de coeurs.
+    - Modéliser les classes `MotherBoard`, `RAM`, `GPU`, `SoundCard`, `BluetoothCard` en leur attribuant des propriétés spécifiques.
+    - La classe `Computer` contient des pièces requises (non nulles): 1 `MotherBoard`, 1 `CPU` et 1 `GPU`. Elle contient aussi des pièces optionnelles (qui peuvent être nulles): 1 `SoundCard` et 1 `BluetoothCard`.
+    - Instancier un ordinateur qui n'a que les pièces requises
+    - Instancier un ordinateur qui a les pièces optionnelles
+    - Afficher les informations de chaque ordinateur en suivant ce modèle
+        - "Ordinateur: CPU (ClockSpeed: 100, ...), GPU(ClockSpeed: 20, ...)"
+    - La classe `SliComputer` est un `Computer` qui contient un tableau qui peut contenir jusqu'à 9 GPU supplémentaires qui doivent être du même type que le GPU principal. Elle définit aussi une méthode `bool IsSliCompliant()` qui retourne true unqiement si tout les GPU sont exactement les mêmes.
+    - Instancier un `SliComputer` avec 2 GPU supplémentaires identiques au GPU principal.
+    - Instancier un `SliComputer` avec 3 GPU supplémentaires différents du GPU principal.
+    - Afficher le résultat de `IsSliCompliant()` à chaque fois.
 1. Modélisation des formes géométriques avec les `Record`
     1. Créer un record “Circle” qui prend en paramètre du constructeur un “Radius”
         - Ajouter les propriétés calculées publiques (en lecture seule): Area, Circumference et Diameter
