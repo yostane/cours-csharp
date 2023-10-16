@@ -56,6 +56,15 @@ tour.cs
     - Classe abstraite: une classe qui a au moins une propriété ou méthode abstraite
     - Les membres abstraits sont destinés à être définis par une sous classe non abstraite.
 
+```cs
+--8<--
+ComputerPiece.cs
+--8<--
+--8<--
+OopProgram.cs
+--8<--
+```
+
 ## Programmation fonctionnelle
 
 - Les fonctions sont des éléments de première classe : Les fonctions sont comme des variables
