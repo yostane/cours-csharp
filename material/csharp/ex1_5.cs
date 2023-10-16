@@ -82,12 +82,17 @@ void RunExercice5()
   }
 }
 
-RunExercice1();
-RunExercice2();
-for (int i = 0; i < 20; i++)
-{
-  RunExercice3();
-}
 
-RunExercice4();
-RunExercice5();
+void RunExercices()
+{
+  RunExercice1();
+  RunExercice2();
+  for (int i = 0; i < 20; i++)
+  {
+    RunExercice3();
+  }
+
+  RunExercice4();
+  RunExercice5();
+
+}
