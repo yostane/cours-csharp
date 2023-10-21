@@ -1,5 +1,7 @@
 # Le framework .Net
 
+Le framework .Net et le framework officiel qui accompagne le langage C#.
+
 ## Qu'est-ce qu'un framework ?
 
 On peut voir un framework comme une librairie dont l'usage est structurant dans un projet. Ils proposent généralement:
@@ -50,3 +52,15 @@ Il faut aussi s’intéresser à son:
 ## Collections
 
 ## Programmation asynchrone
+
+- Pour chaque programme que vous lancez, un processus est créé
+    - Un processus est lancé avec un seul thread au démarrage et peut en gérer plusieurs par la suite
+- Les processus et les threads s’exécutent de façon asynchrone (on dit aussi, de façon concurrente)
+    - En général, on crée des Thread avec un `new Thread()` ou une syntaxe similaire selon le langage
+    - Dans un processeur avec un seul noyau (single core), les threads s'exécutent sur le même noyau
+    - Dans un processeur avec plusieurs noyaux (single core), les threads peuvent s'exécutent sur des noyaux différents. On parle alors de programmation parallèle
+- Cependant, les processus et les threads sont des fonctionnalités gérés au niveau de votre OS et non au niveau du langage et son runtime
+    - Cela rend leur manipulation et optimisation un peu compliquée
+- C'est pour cela que certains langages proposent leur propre approche de programmation asynchrone
+    - Cela permet de proposer un modèle de programmation plus simple et des optimisation plus faciles
+- En C#, le modèle de programmation asynchrone repose sur les **tâches asynchrones** (ou `async Tasks`)

@@ -14,9 +14,9 @@ nav:
   - C#: csharp-tour.md
   - Exercices C#: csharp-exercices.md
   - .Net: dotnet.md
+  - Exercices .Net: dotnet-exercices.md
   - ASP.Net: asp-dot-net.md
-  - Devoirs:
-      - Jeu avec Monogame: devoir-monogame.md
+  - Monogame: monogame.md
 
 plugins:
   - search
@@ -30,6 +30,8 @@ theme:
     - navigation.top
     - navigation.indexes
     - navigation.path
+    - content.code.copy
+    - content.code.select
   icon:
     repo: fontawesome/brands/github
   palette:
@@ -62,6 +64,8 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.snippets:
       base_path: ["includes", "material/csharp"]
       auto_append:

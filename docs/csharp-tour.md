@@ -102,10 +102,10 @@ OopProgram.cs
     - Programme moins spatieux et plus rapide
     - `dotnet publish -c Release …`
 
-## Mise en production d'un projet C #
+## Mise en production d'un projet `C#`
 
 - Pour générer [le binaire selon l’OS](https://docs.microsoft.com/fr-fr/dotnet/core/tools/dotnet-publish): `dotnet publish -c Release -r <RID> --self-contained (false ou true)`
-    - `-c Release`: optimiser et ne pas inclure les infos de débogugage
+    - `-c Release`: optimiser et ne pas inclure les infos de débogage
     - `-r <RID>`: rid est à remplacer par [l’id du système cible](https://docs.microsoft.com/fr-fr/dotnet/core/rid-catalog). Exemples: `win-x64`, `linux-x64`, `osx-x64`, etc.
     - `--self-contained`: permet d’embarquer ou non le runtime dotnet dans le livrable. Pour une livraison autonome préférer le `--self-contained` à `true` au lieu de `false`
 - Votre livrable se trouvera dans le dossier: `bin\Release\netx.x\<rid>\publish`
