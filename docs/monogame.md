@@ -37,7 +37,7 @@ while (true){
 
 ## Premiers pas avec Monogame
 
-- Ajout du modèle de projet: “dotnet new install MonoGame.Templates.CSharp”
+- Ajout du modèle de projet: `dotnet new install MonoGame.Templates.CSharp`
 - Vérifier qie le modèle a été ajouté avec un `dotnet new list`
 - Créer le projet: `dotnet new mgdesktopgl -o first-game`
 - `cd first-game`
