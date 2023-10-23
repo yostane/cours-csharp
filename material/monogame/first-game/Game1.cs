@@ -29,7 +29,7 @@ public class Game1 : Game
   protected override void LoadContent()
   {
     _spriteBatch = new SpriteBatch(GraphicsDevice);
-    _playerTexture = new Texture2D(GraphicsDevice, _player.Width, _player.Height);
+    _playerTexture = Content.Load<Texture2D>("mario-pose-1");
   }
 
   protected override void Update(GameTime gameTime)
@@ -50,7 +50,7 @@ public class Game1 : Game
     GraphicsDevice.Clear(Color.CornflowerBlue);
 
     _spriteBatch.Begin();
-    _spriteBatch.Draw(_playerTexture, this._player, Color.Red);
+    _spriteBatch.Draw(_playerTexture, this._player, Color.White);
     _spriteBatch.End();
     base.Draw(gameTime);
   }
