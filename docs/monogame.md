@@ -65,6 +65,6 @@ while (true){
 - Pour installer correctement le compilateur, il faut d’abord avoir un fichier **.config/dotnet-tools.json** dans son projet avec la commande `dotnet new tool-manifest`
 - Installer le compilateur: `dotnet tool install dotnet-mgcb` (il sera lancé automatiquement lorsqu'on fera `dotnet run`)
 - Installer l’éditeur pour windows: `dotnet tool install dotnet-mgcb-editor-windows`
-- Puis le lancer en lançant la commande `mgcb-editor-windows`
+- Puis le lancer en lançant la commande `dotnet mgcb-editor-windows`
 - Un fois l’éditeur ouvert, créer un nouveau mgcb dans `[racine du projet]/Content/Content.mgcb`
 - Vous pouvez suivre ce [guide](https://docs.monogame.net/articles/getting_started/4_adding_content.html) pour voir comment ajouter et charger des ressources
