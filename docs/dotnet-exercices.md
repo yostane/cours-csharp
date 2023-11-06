@@ -24,15 +24,16 @@
     s-de-C
     ```
 
-1. Définir votre propose classe de journalisation (`Logger`) qui va servira à écrire des logs dans un fichier.
+1. Définir votre propose classe de journalisation (`Logger`) qui va servrir à écrire des logs dans un fichier.
     - La classe prend en argument du constructeur le nom du fichier de logs
     - La classe propose les méthodes: `Info(String message)` et `Warn(String message)`. Chacune des méthodes ajoute une ligne au fichier avec le format:
         - Si c'est une Info: `{date et heure actuelle} ℹ️ {message}`
         - Si c'est un Warn: `{date et heure actuelle} ⚠️ {message}`
-    - ⚠️: Attention à bien fermer les fichiers une fois l'écriture du log faite pour le libérer
-    - Créer une instance de cette classe et ajouter quelques logs
+    - ⚠️: Attention à bien fermer le fichier une fois l'écriture du log faite (pour le libérer)
+    - Créer une instance de la classe `Logger` et ajouter quelques logs
     - Ajouter les méthodes `Error(String message)` et `Debug(String message)` avec un format adapté et basé sur le même principe que les méthodes définies plus haut.
-    - Définir une méthode `ShowAllWarnings()` qui affiche tous les logs de type `Warn` dans le fichier de log.
+    - Définir une méthode `ShowAllWarnings()` qui affiche tous les logs de type `Warn` présents dans le fichier de log.
+    - Est-ce que vous voyez des inconvénients / contraintes avec cette méthode de journalisation ?
 
 ## Série 2 (programmation asynchrone)
 
