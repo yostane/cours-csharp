@@ -51,6 +51,18 @@ Il faut aussi s’intéresser à son:
 
 ## Collections
 
+## Fichiers
+
+- C# propose plusieurs façons de manipuler des fichiers
+- Les classes `StreamReader` et `StreamWriter` permettent de manipuler les fichiers sous forme de flux de données synchrones.
+- Il existe aussi des méthodes utilitaires pour lire et écrire le contenu du fichier en une fois sans passer pas des streams.
+
+```cs
+--8<--
+file_demo/Program.cs
+--8<--
+```
+
 ## Programmation asynchrone
 
 - Pour chaque programme que vous lancez, un processus est créé

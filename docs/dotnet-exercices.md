@@ -7,12 +7,24 @@
 
 ## Série 1 (Fichiers)
 
-- Utiliser les streams reader et / ou writer pour lire et un fichier et:
+- Utiliser les `StreamReader` et / ou `StreamWriter` pour lire et un fichier et:
     - Afficher le nombre de caractères de chaque ligne de ce fichier
     - Génère un fichier qui ajoute un point à la fin de chaque ligne du fichier d'origine si elle n'est pas déjà présente
     - Génère un fichier qui contient la ligne qui a le plus de caractères dans le fichier lu
-    - Génère un fichier qui contient les lignes du fichier lu triés par le nombre de caractères de la ligne
+    - Génère un fichier qui contient les lignes du fichier lu triés par ordre croissant le nombre de caractères de la ligne
     - Génère un fichier qui contient les lignes du fichier lu triés par ordre croissant du dictionnaire
+- Utiliser un `StreamWriter` pour écrire dans un fichier le contenu d'une chaîne de caractères au format pyramidal. Par exemple "Je-fais-des-exos-de-C#" donne le fichier (le dernier caractère sera ignoré car il ne permet pas de faire une pyramide):
+
+    ```txt
+    J
+    e-
+    fai
+    s-de
+    s-exo
+    s-de-C
+    ```
+
+-
 
 ## Série 2 (programmation asynchrone)
 
