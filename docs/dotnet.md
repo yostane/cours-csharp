@@ -55,7 +55,7 @@ Il faut aussi s’intéresser à son:
 
 - C# propose plusieurs façons de manipuler des fichiers
 - Les classes `StreamReader` et `StreamWriter` permettent de manipuler les fichiers sous forme de flux de données synchrones.
-- Il existe aussi des méthodes utilitaires pour lire et écrire le contenu du fichier en une fois sans passer pas des streams.
+- Il existe aussi des méthodes utilitaires pour lire et écrire le contenu du fichier en une fois sans passer pas des streams. La [Doc de C# montre comment effectuer les tâches communes](https://learn.microsoft.com/en-us/dotnet/standard/io/common-i-o-tasks)
 
 ```cs
 --8<--

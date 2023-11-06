@@ -7,13 +7,13 @@
 
 ## Série 1 (Fichiers)
 
-- Utiliser les `StreamReader` et / ou `StreamWriter` pour lire et un fichier et:
+1. Utiliser les `StreamReader` et / ou `StreamWriter` pour lire et un fichier et:
     - Afficher le nombre de caractères de chaque ligne de ce fichier
     - Génère un fichier qui ajoute un point à la fin de chaque ligne du fichier d'origine si elle n'est pas déjà présente
     - Génère un fichier qui contient la ligne qui a le plus de caractères dans le fichier lu
     - Génère un fichier qui contient les lignes du fichier lu triés par ordre croissant le nombre de caractères de la ligne
     - Génère un fichier qui contient les lignes du fichier lu triés par ordre croissant du dictionnaire
-- Utiliser un `StreamWriter` pour écrire dans un fichier le contenu d'une chaîne de caractères au format pyramidal. Par exemple "Je-fais-des-exos-de-C#" donne le fichier (le dernier caractère sera ignoré car il ne permet pas de faire une pyramide):
+1. Utiliser un `StreamWriter` pour écrire dans un fichier le contenu d'une chaîne de caractères au format pyramidal. Par exemple "Je-fais-des-exos-de-C#" donne le fichier (le dernier caractère sera ignoré car il ne permet pas de faire une pyramide):
 
     ```txt
     J
@@ -24,7 +24,15 @@
     s-de-C
     ```
 
--
+1. Définir votre propose classe de journalisation (`Logger`) qui va servira à écrire des logs dans un fichier.
+    - La classe prend en argument du constructeur le nom du fichier de logs
+    - La classe propose les méthodes: `Info(String message)` et `Warn(String message)`. Chacune des méthodes ajoute une ligne au fichier avec le format:
+        - Si c'est une Info: `{date et heure actuelle} ℹ️ {message}`
+        - Si c'est un Warn: `{date et heure actuelle} ⚠️ {message}`
+    - ⚠️: Attention à bien fermer les fichiers une fois l'écriture du log faite pour le libérer
+    - Créer une instance de cette classe et ajouter quelques logs
+    - Ajouter les méthodes `Error(String message)` et `Debug(String message)` avec un format adapté et basé sur le même principe que les méthodes définies plus haut.
+    - Définir une méthode `ShowAllWarnings()` qui affiche tous les logs de type `Warn` dans le fichier de log.
 
 ## Série 2 (programmation asynchrone)
 
