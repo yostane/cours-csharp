@@ -35,6 +35,14 @@
     - Définir une méthode `ShowAllWarnings()` qui affiche tous les logs de type `Warn` présents dans le fichier de log.
     - Est-ce que vous voyez des inconvénients / contraintes avec cette méthode de journalisation ?
 
+## Corrections série 1
+
+```cs title="Correction"
+--8<--
+file_exo/Program.cs
+--8<--
+```
+
 ## Série 2 (programmation asynchrone)
 
 En C#, la méthode recommandée pour exécuter des traitements asynchrones (qui sont mis en oeuvre habituellement avec les threads et les process) consiste à utiliser “Task.Run(() => { // traitement async })”. On dit que c’est une programmation asynchrone basée sur les tâches.
