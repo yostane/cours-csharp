@@ -5,7 +5,16 @@
     - Activer la null safety
     - Ne pas utiliser les fonctions de tri de .Net
 
-## Série 1 (programmation asynchrone)
+## Série 1 (Fichiers)
+
+- Utiliser les streams reader et / ou writer pour lire et un fichier et:
+    - Afficher le nombre de caractères de chaque ligne de ce fichier
+    - Génère un fichier qui ajoute un point à la fin de chaque ligne du fichier d'origine si elle n'est pas déjà présente
+    - Génère un fichier qui contient la ligne qui a le plus de caractères dans le fichier lu
+    - Génère un fichier qui contient les lignes du fichier lu triés par le nombre de caractères de la ligne
+    - Génère un fichier qui contient les lignes du fichier lu triés par ordre croissant du dictionnaire
+
+## Série 2 (programmation asynchrone)
 
 En C#, la méthode recommandée pour exécuter des traitements asynchrones (qui sont mis en oeuvre habituellement avec les threads et les process) consiste à utiliser “Task.Run(() => { // traitement async })”. On dit que c’est une programmation asynchrone basée sur les tâches.
 
