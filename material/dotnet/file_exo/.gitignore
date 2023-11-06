@@ -1,5 +1,7 @@
 hello.txt
 test.txt
+dotted_file.txt
+longest_line.txt
 
 *.swp
 *.*~

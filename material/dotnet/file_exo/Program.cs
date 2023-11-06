@@ -25,8 +25,27 @@ static void AddDotIfNotPresent(String filePath)
   }
 }
 
-
+static void WriteLongestLine(String filePath)
+{
+  using StreamReader sr = new(filePath);
+  String? line = sr.ReadLine();
+  String? longestLine = line;
+  while (line != null)
+  {
+    line = sr.ReadLine();
+    if (longestLine?.Length < line?.Length)
+    {
+      longestLine = line;
+    }
+  }
+  if (longestLine != null)
+  {
+    using StreamWriter sw = new("longest_line.txt");
+    sw.WriteLine(longestLine);
+  }
+}
 
 String filePath = "input_file.txt";
 PrintCountPerLine(filePath);
 AddDotIfNotPresent(filePath);
+WriteLongestLine(filePath);
