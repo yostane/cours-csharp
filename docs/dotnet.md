@@ -57,6 +57,13 @@ Il faut aussi s’intéresser à son:
 - Les classes `StreamReader` et `StreamWriter` permettent de manipuler les fichiers sous forme de flux de données synchrones.
 - Il existe aussi des méthodes utilitaires pour lire et écrire le contenu du fichier en une fois sans passer pas des streams. La [Doc de C# montre comment effectuer les tâches communes](https://learn.microsoft.com/en-us/dotnet/standard/io/common-i-o-tasks)
 
+!!! hint "Les streams"
+
+    - Un `Stream` (ou flux en Français) permet de manipuler des données au fur et à mesure (sans avoir à les charger intégralement en mémoire)
+    - L'avantage des streams et qu'ils permettent consommer généralement moins de mémoire et qu'il permettent de commencer à traiter plus rapidement la données car on n'est pas obligé d'attendre 
+    - Les streams sont donc pariculièrement utile quand on veut traveiller avec des fichiers ou si on fait du réseau car les temps d'accès sont moins rapides qu'un
+    - Par contre, la données est déjà intégralement chargée en mémoire, les streams ne sont pas pertinents.
+
 ```cs
 --8<--
 file_demo/Program.cs
