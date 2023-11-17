@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace first_game;
 
@@ -16,6 +17,8 @@ public class Game1 : Game
   private Texture2D _playerTexture, _goombaTexture, _playerDeadTexture;
   private GraphicsDeviceManager _graphics;
   private SpriteBatch _spriteBatch;
+
+  private Song _mainMusic;
 
   public Game1()
   {
@@ -38,6 +41,9 @@ public class Game1 : Game
     _playerTexture = Content.Load<Texture2D>("mario-pose-1");
     _goombaTexture = Content.Load<Texture2D>("goomba-pose-1");
     _playerDeadTexture = Content.Load<Texture2D>("mario-pose-mort");
+    _mainMusic = Content.Load<Song>("music");
+    MediaPlayer.Play(_mainMusic);
+    MediaPlayer.IsRepeating = true;
   }
 
   protected override void Update(GameTime gameTime)
