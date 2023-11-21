@@ -7,14 +7,15 @@ namespace first_game;
 
 public class Game1 : Game
 {
-  private Rectangle _player;
+  private Rectangle _player, _map;
   private bool _isDead = false;
   private Rectangle[] _goombas = {
     new(200, 70, 30, 30),
     new(410, 70, 30, 30),
     new(500, 130, 30, 30),
   };
-  private Texture2D _playerTexture, _goombaTexture, _playerDeadTexture;
+  private Texture2D _playerTexture, _goombaTexture, _playerDeadTexture, _bg1CollisionTexture, _bg1Texture;
+  private Color[] _mapCollisionColors;
   private GraphicsDeviceManager _graphics;
   private SpriteBatch _spriteBatch;
 
@@ -26,6 +27,7 @@ public class Game1 : Game
     Content.RootDirectory = "Content";
     IsMouseVisible = true;
     _player = new(50, 50, 30, 70);
+    _map = new(0, 0, 709, 278);
   }
 
   protected override void Initialize()
@@ -41,6 +43,10 @@ public class Game1 : Game
     _playerTexture = Content.Load<Texture2D>("mario-pose-1");
     _goombaTexture = Content.Load<Texture2D>("goomba-pose-1");
     _playerDeadTexture = Content.Load<Texture2D>("mario-pose-mort");
+    _bg1CollisionTexture = Content.Load<Texture2D>("level1-collisions");
+    _mapCollisionColors = new Color[_bg1CollisionTexture.Width * _bg1CollisionTexture.Height];
+    _bg1CollisionTexture.GetData<Color>(_mapCollisionColors);
+    _bg1Texture = Content.Load<Texture2D>("level1-map");
     _mainMusic = Content.Load<Song>("music");
     MediaPlayer.Play(_mainMusic);
     MediaPlayer.IsRepeating = true;
@@ -71,6 +77,7 @@ public class Game1 : Game
       }
     }
 
+
     base.Update(gameTime);
   }
 
@@ -84,6 +91,7 @@ public class Game1 : Game
     {
       _spriteBatch.Draw(_goombaTexture, goomba, Color.White);
     }
+    _spriteBatch.Draw(_bg1Texture, _map, Color.White);
     _spriteBatch.End();
     base.Draw(gameTime);
   }
