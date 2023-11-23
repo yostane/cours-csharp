@@ -1,29 +1,67 @@
-class ComputerPiece
+namespace DemoOpp
 {
-    // prorpiété en lecture et écriture
-    public int WattUsage { get; set; }
-    // prorpiété en lecture seule
-    public int Price { get; }
-
-    public ComputerPiece(int price)
+    class ComputerPiece
     {
-        this.Price = price;
-    }
-}
+        // prorpiété en lecture et écriture
+        public int WattUsage { get; set; }
+        // prorpiété en lecture seule
+        public int Price { get; }
 
-class CPU : ComputerPiece
-{
-    public CPU(int price) : base(price)
-    {
+        public ComputerPiece(int price)
+        {
+            Console.WriteLine("ComputerPiece constructor");
+            this.Price = price;
+        }
     }
-    public int ClockSpeed { get; set; }
-    public int CoreCount { get; set; }
-}
 
-class RAM : ComputerPiece
-{
-    public RAM(int price) : base(price)
+    class PowerGenerator : ComputerPiece, ILightable
     {
+        public PowerGenerator(int price) : base(price)
+        {
+        }
+
+        public void TurnLightsOff()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TurnLightsOn()
+        {
+            throw new NotImplementedException();
+        }
     }
-    public int Capacity { get; set; }
+
+    class UsbPort : ComputerPiece, ILightable
+    {
+        public UsbPort(int price) : base(price)
+        {
+        }
+
+        public void TurnLightsOff()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TurnLightsOn()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class CPU : ComputerPiece
+    {
+        public CPU(int price) : base(price)
+        {
+        }
+        public int ClockSpeed { get; set; }
+        public int CoreCount { get; set; }
+    }
+
+    class RAM : ComputerPiece
+    {
+        public RAM(int price) : base(price)
+        {
+        }
+        public int Capacity { get; set; }
+    }
 }

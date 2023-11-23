@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
@@ -7,7 +8,7 @@ namespace first_game;
 
 public class Game1 : Game
 {
-  private Rectangle _player, _map;
+  private Rectangle _player, _level1Map;
   private bool _isDead = false;
   private Rectangle[] _goombas = {
     new(200, 70, 30, 30),
@@ -18,6 +19,7 @@ public class Game1 : Game
   private Color[] _mapCollisionColors;
   private GraphicsDeviceManager _graphics;
   private SpriteBatch _spriteBatch;
+  private Rectangle[] _level1Rectangles;
 
   private Song _mainMusic;
 
@@ -27,7 +29,13 @@ public class Game1 : Game
     Content.RootDirectory = "Content";
     IsMouseVisible = true;
     _player = new(50, 50, 30, 70);
-    _map = new(0, 0, 709, 278);
+    _level1Map = new(0, 200, 709, 278);
+    _level1Rectangles = new Rectangle[]{
+      // sol
+      new(0, 400, 690, 40),
+      // colonne en jaune
+      new(520, 200, 60, 150)
+    };
   }
 
   protected override void Initialize()
@@ -57,15 +65,39 @@ public class Game1 : Game
     if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
       Exit();
 
+    int deltaX = 0;
+    int deltaY = 0;
+
     if (GamePad.GetState(PlayerIndex.One).DPad.Left == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Left))
-      _player.X -= 3;
+      deltaX -= 3;
     else if (GamePad.GetState(PlayerIndex.One).DPad.Right == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Right))
-      _player.X += 3;
+      deltaX += 3;
 
     if (GamePad.GetState(PlayerIndex.One).DPad.Down == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Down))
-      _player.Y += 3;
+      deltaY += 3;
+
     else if (GamePad.GetState(PlayerIndex.One).DPad.Up == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Up))
-      _player.Y -= 3;
+      deltaY -= 3;
+
+    _player.X += deltaX;
+    foreach (var wall in _level1Rectangles)
+    {
+      if (_player.Intersects(wall))
+      {
+        _player.X -= deltaX;
+        break;
+      }
+    }
+    _player.Y += deltaY;
+    foreach (var wall in _level1Rectangles)
+    {
+      if (_player.Intersects(wall))
+      {
+        _player.Y -= deltaY;
+        break;
+      }
+    }
+
 
     _isDead = false;
     foreach (var goomba in _goombas)
@@ -76,7 +108,6 @@ public class Game1 : Game
         break;
       }
     }
-
 
     base.Update(gameTime);
   }
@@ -91,7 +122,12 @@ public class Game1 : Game
     {
       _spriteBatch.Draw(_goombaTexture, goomba, Color.White);
     }
-    _spriteBatch.Draw(_bg1Texture, _map, Color.White);
+
+    foreach (var wall in _level1Rectangles)
+    {
+      _spriteBatch.Draw(_goombaTexture, wall, Color.White);
+    }
+    _spriteBatch.Draw(_bg1Texture, _level1Map, Color.White);
     _spriteBatch.End();
     base.Draw(gameTime);
   }
