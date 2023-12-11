@@ -57,11 +57,23 @@ tour.cs
     - Les membres abstraits sont destinés à être définis par une sous classe non abstraite.
 
 ```cs
+// ComputerPiece.cs
 --8<--
-ComputerPiece.cs
+oop/ComputerPiece.cs
 --8<--
+// ILightable.cs
 --8<--
-OopProgram.cs
+oop/ILightable.cs
+--8<--
+
+// IOverclockable.cs
+--8<--
+oop/IOverclockable.cs
+--8<--
+
+// OopProgram.cs
+--8<--
+oop/OopProgram.cs
 --8<--
 ```
 

@@ -52,6 +52,12 @@ ex1_5.cs
 --8<--
 ```
 
+```cs title="Exercice 11"
+--8<--
+ex11.cs
+--8<--
+```
+
 ## Série 2
 
 1. Modélisation des formes géométriques avec les `Record`
