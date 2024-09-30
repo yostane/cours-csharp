@@ -16,6 +16,7 @@ nav:
   - .Net: dotnet.md
   - Exercices .Net: dotnet-exercices.md
   - ASP.Net: asp-dot-net.md
+  - Exercices ASP.Net: asp-dot-net-exercices.md
   - Monogame: monogame.md
 
 plugins:
