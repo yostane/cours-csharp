@@ -71,3 +71,5 @@ ENV/
 
 # MkDocs documentation
 site*/
+bin/
+obj/
