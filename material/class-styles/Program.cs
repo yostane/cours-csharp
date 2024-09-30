@@ -1,5 +1,5 @@
 ﻿HeroWithConstructor heroWithConstructor = new(1, "garan", Role.Fighter);
-HeroWithoutConstructor heroWithoutConstructor = new() { Id = 2, Name = "saraka", Role = Role.Spport }
+HeroWithoutConstructor heroWithoutConstructor = new() { Id = 2, Name = "saraka", Role = Role.Spport };
 
 public enum Role
 {
@@ -12,7 +12,7 @@ public class HeroWithConstructor
   public string Name { get; set; }
   public Role Role { get; set; }
 
-  public HeroWithConstructor(int id, int name, int role)
+  public HeroWithConstructor(int id, string name, Role role)
   {
     this.Id = id;
     this.Name = name;
