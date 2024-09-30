@@ -46,17 +46,19 @@
 
 - Les corrections sont disponibles ci-dessous ainsi qu'en [suivant ce lien](https://gist.github.com/yostane/9b9906b0c820460214400a2802b89276)
 
-```cs title="exos de 1 à 5"
---8<--
-ex1_5.cs
---8<--
-```
+??? "Exos de 1 à 5"
+    ```cs title="exos de 1 à 5"
+    --8<--
+    ex1_5.cs
+    --8<--
+    ```
 
-```cs title="Exercice 11"
---8<--
-ex11.cs
---8<--
-```
+??? "Exercice 11"
+    ```cs title="Exercice 11"
+    --8<--
+    ex11.cs
+    --8<--
+    ```
 
 ## Série 2
 
