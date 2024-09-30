@@ -1,3 +1,14 @@
+namespace Mylib
+{
+  class ComputerPiece
+  {
+    // Constructeur
+    public ComputerPiece(int price)
+    {
+    }
+  }
+}
+
 namespace DemoOpp
 {
   class ComputerPiece

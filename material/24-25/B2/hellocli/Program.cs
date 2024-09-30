@@ -52,7 +52,7 @@ foreach (var item in items)
   Console.WriteLine($"La valeur de l'élement courant est : {item}");
 }
 
-CPU cpu1 = new CPU(200);
+CPU cpu1 = new(200);
 cpu1.WattUsage = 100;
 Console.WriteLine(cpu1.WattUsage);
 
@@ -66,6 +66,7 @@ CPU cpu3 = new(200)
   CoreCount = 8,
   WattUsage = 10
 };
+
 Console.WriteLine(cpu3);
 
 
@@ -75,6 +76,3 @@ RAM ram1 = new(200)
   WattUsage = 10
 };
 Console.WriteLine(ram1);
-
-ComputerBox computerBox = new(10, 10, 5);
-Console.WriteLine(computerBox);
