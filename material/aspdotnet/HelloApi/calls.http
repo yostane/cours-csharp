@@ -2,3 +2,5 @@
 {{base_url}}/
 ###
 {{base_url}}/heroes
+###
+{{base_url}}/heroes/1

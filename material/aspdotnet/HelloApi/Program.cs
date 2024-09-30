@@ -7,6 +7,7 @@ List<Hero> heroes = [
 ];
 
 app.MapGet("/heroes", () => heroes);
+app.MapGet("/heroes/{id}", (int id) => heroes[id]);
 app.MapGet("/", () => "Hello World!");
 
 app.Run();
