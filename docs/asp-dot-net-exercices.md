@@ -14,8 +14,7 @@
             "nbNotesSupMoyenne": 5
         }
         ```
-
-1. Créer un endpoint `/notes/{nb}` qui génère `nb` notes aléatoires et renvoie un json listant les notes, la moyenne et le nombre de notes supérieurs à la moyene.
+1. Créer un endpoint `/notes/{nb}` qui génère `nb` notes aléatoires et renvoie un json listant les notes, la moyenne et le nombre de notes supérieurs à la moyenne.
     - Exemple: `/notes/10`
         ```json
         {
