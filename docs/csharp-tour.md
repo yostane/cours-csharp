@@ -57,11 +57,52 @@ tour.cs
     - Les membres abstraits sont destinés à être définis par une sous classe non abstraite.
 
 ```cs
+// ComputerPiece.cs
 --8<--
-ComputerPiece.cs
+oop/ComputerPiece.cs
 --8<--
+// ILightable.cs
 --8<--
-OopProgram.cs
+oop/ILightable.cs
+--8<--
+
+// IOverclockable.cs
+--8<--
+oop/IOverclockable.cs
+--8<--
+
+// OopProgram.cs
+--8<--
+oop/OopProgram.cs
+--8<--
+```
+
+### Constructeur vs bloc d'initialisation
+
+- Le constructeur est une méthode spéciale qui est appelée lors de l'instanciation d'une classe
+- Le bloc d'initialisation est un bloc de code qui est exécuté avant le constructeur
+- Il y a deux styles d'initialisation des propriétés d'une classe: l'initialisation via le constructeur et l'initialisation via le bloc d'initialisation
+- Chaque style a des avantages et inconvénients en terme de lisibilité et verbosité
+- Même si on peut mixer les deux styles d'initialisation, il est recommandé de choisir un style et de s'y tenir pour la cohérence du code
+
+```cs title="Deux styles d'initialisation"
+--8<--
+class-styles/Program.cs
+--8<--
+```
+
+### record
+
+Les record sont des classes avec des fonctionnalités supplémentaires qui permettent de simplifier la création de classes simples.
+
+- Les records sont des classes immuables
+- Les records sont des classes finales (non héritables)
+- Les records ont des propriétés en lecture seule
+- Les records ont des méthodes `Equals`, `GetHashCode`, `ToString` et `With` générées automatiquement
+
+```cs
+--8<--
+record/Program.cs
 --8<--
 ```
 
@@ -69,10 +110,10 @@ OopProgram.cs
 
 - Les fonctions sont des éléments de première classe : Les fonctions sont comme des variables
 - Utilisation intensive de fonctions pures: fonction sans effet de bord, toujours le même résultat pour les mêmes entrées
-    - exemples de fonctions par pure: print (car elle change la console)
+    - exemples de fonctions par pure: `WriteLine` (car elle change la console)
 - Immutabilité
     - On ne peut pas changer la valeur d'une variable une fois initialisée
-    - On ne peut pas changer les propriétés d'un object une fois instancié
+    - On ne peut pas changer les propriétés d'un objet une fois instancié
     - On ne peut pas ajouter ou supprimer des éléments d'une collection
 - On le code est développé sous forme d'une chaîne de traitements (comme dans une usine)
 

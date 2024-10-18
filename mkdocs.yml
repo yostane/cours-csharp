@@ -16,6 +16,7 @@ nav:
   - .Net: dotnet.md
   - Exercices .Net: dotnet-exercices.md
   - ASP.Net: asp-dot-net.md
+  - Exercices ASP.Net: asp-dot-net-exercices.md
   - Monogame: monogame.md
 
 plugins:
@@ -60,13 +61,13 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.snippets:
-      base_path: ["includes", "material/csharp", "material/dotnet"]
+      base_path: ["includes", "material/csharp", "material/dotnet", "material"]
       auto_append:
         - "abbreviations.md"
