@@ -20,6 +20,13 @@ Les éléments suivants sont créés :
 
 - Créer un Projet d'API "minimal API" `dotnet new web -o HelloApi`
 - Lancer le serveur `dotnet run`, ou en mode hot reload `dotnet watch run`
+- Tester l'API avec un client REST (comme *Rest Client* de VSCode)
+
+```cs title="calls.http"
+--8<--
+aspdotnet/HelloApi/calls.http
+--8<--
+```
 
 ## Ressources
 
