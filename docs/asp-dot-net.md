@@ -17,7 +17,7 @@
 
 ```cs title="calls.http"
 --8<--
-aspdotnet/HelloApi/calls.http
+aspdotnet/api01/api01.http
 --8<--
 ```
 
