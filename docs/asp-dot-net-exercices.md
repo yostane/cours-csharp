@@ -23,3 +23,10 @@
             "nbNotesSupMoyenne": 5
         }
         ```
+
+??? "Solutions"
+    ```cs
+    --8<--
+    aspdotnet/ExercisesApi/Program.cs
+    --8<--
+    ```
