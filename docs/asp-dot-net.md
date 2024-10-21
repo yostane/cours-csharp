@@ -6,7 +6,7 @@
 
 ## Création d'une API minimals (un seul fichier)
 
-- Créer un Projet d'API "minimal API" `dotnet new web -o HelloApi`
+- Créer un Projet d'API "minimal API" `dotnet new webapi -o HelloApi`
 - Lancer le serveur `dotnet run`, ou en mode hot reload `dotnet watch run`
 - Les éléments suivants sont créés :
     - Program.cs: point d'entrée de l'application qui définit déjà un API Rest et un endoint get.
