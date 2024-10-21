@@ -1,0 +1,13 @@
+@base_url=http://localhost:5286
+
+{{base_url}}/palindrome/elle
+###
+{{base_url}}/palindrome/tintin
+###
+{{base_url}}/ez/palindrome/elle
+###
+{{base_url}}/ez/palindrome/tintin
+###
+{{base_url}}/example/schtroumpf/
+###
+{{base_url}}/schtroumpf/5/2

@@ -5,7 +5,7 @@
 1. Créer un endpoint `/schtroumpf/{nb1}/{nb2}` qui retourne le schtroumpf d'un tableau de `nb1` éléments aléatoires et d'un tableau de `nb2` éléments aléatoires. Les valeurs des deux tableaux sont comprises entre 1 et 12 
     - voir définition dans [les exos C#](./csharp-exercices.md)
     - Par exemple, `GET /schtroumpf/4/2` avec les tableaux aléatoire `[4, 8, 7, 12]` et `[3, 6]`, le résultat sera `279`
-1. Créer un endpoint `/notes` qui génère 10 notes aléatoires et renvoie un json listant les notes, la moyenne et le nombre de notes supérieurs à la moyene.
+1. Créer un endpoint `/notes` qui génère 10 notes aléatoires et renvoie un json listant les notes, la moyenne et le nombre de notes supérieures à la moyenne.
     - Exemple
         ```json
         {
