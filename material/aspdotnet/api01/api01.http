@@ -1,6 +1,4 @@
-@api01_HostAddress = http://localhost:5122
+@base_url = http://localhost:5122
 
-GET {{api01_HostAddress}}/weatherforecast/
+GET {{base_url}}/weatherforecast/
 Accept: application/json
-
-###
