@@ -51,6 +51,12 @@ Il faut aussi s’intéresser à son:
 
 ## Collections
 
+```cs
+--8<--
+dotnet/collections/Program.cs
+--8<--
+```
+
 ## Fichiers
 
 - C# propose plusieurs façons de manipuler des fichiers
