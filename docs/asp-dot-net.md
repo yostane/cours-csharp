@@ -21,6 +21,14 @@ aspdotnet/api01/api01.http
 --8<--
 ```
 
+## Autre exemple
+
+```cs title="calls.http"
+--8<--
+aspdotnet/HelloApi/Program.cs
+--8<--
+```
+
 ## Ressources
 
 - [Tutoriel officiel](https://learn.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?tabs=visual-studio-code)
