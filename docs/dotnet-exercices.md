@@ -5,7 +5,24 @@
     - Activer la null safety
     - Ne pas utiliser les fonctions de tri de .Net
 
-## Série 1 (Fichiers)
+## Collections
+
+### Partie 1
+
+Utiliser `foreach` si besoin (et ne pas utiliser LINQ: Select, etc.):
+    
+1. Créer une fonction qui prend une liste d'entiers en argument et affiche uniquement les entiers pairs.
+1. Créer une fonction qui prend une liste d'entiers en argument et retourne la liste des entiers pairs.
+1. Créer une fonction qui prend une chaîne de caractères en argument et retourne la liste de ses consonnes (pour rappel, les voyelles sont a, i, u, e, o et y).
+1. Définir un `record` `Person` avec les propriétés `Name` et `Age`. Créer une liste de personnes et:
+    1. afficher les personnes dont l'âge est supérieur à 18 ans.
+    1. afficher les personnes dont le nom commence par la lettre 'A'.
+
+### Partie 2
+
+Utiliser LINQ et ne pas utiliser `foreach`.
+
+## Fichiers
 
 1. Utiliser les `StreamReader` et / ou `StreamWriter` pour lire et un fichier et:
     - Afficher le nombre de caractères de chaque ligne de ce fichier
