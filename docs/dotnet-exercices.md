@@ -23,6 +23,26 @@ Utiliser `foreach` si besoin (et ne pas utiliser LINQ: Select, etc.):
         - Par exemple: `Person("john doe", 20)` devient `Person("John Doe", 20)`
     1. Créer un fonction qui donne l'âge moyen des personnes.
 
+??? "Corrections"
+    ```cs title="1"
+    --8<--
+    dotnet/collection_exo/ex1.cs
+    --8<--
+    ```
+
+    ```cs title="2"
+    --8<--
+    dotnet/collection_exo/ex2.cs
+    --8<--
+    ```
+
+    ```cs title="3"
+    --8<--
+    dotnet/collection_exo/ex3.cs
+    --8<--
+    ```
+
+
 ### Partie 2
 
 Utiliser LINQ pour la partie algorithmie. Utiliser `foreach` uniquement pour l'affichage.
