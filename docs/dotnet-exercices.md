@@ -13,14 +13,21 @@ Utiliser `foreach` si besoin (et ne pas utiliser LINQ: Select, etc.):
     
 1. Créer une fonction qui prend une liste d'entiers en argument et affiche uniquement les entiers pairs.
 1. Créer une fonction qui prend une liste d'entiers en argument et retourne la liste des entiers pairs.
-1. Créer une fonction qui prend une chaîne de caractères en argument et retourne la liste de ses consonnes (pour rappel, les voyelles sont a, i, u, e, o et y).
+1. Créer une fonction qui prend une chaîne de caractères en argument (string) et retourne la liste de ses consonnes (pour rappel, les voyelles sont a, i, u, e, o et y).
+1. Créer une fonction qui prend une liste de chaînes de caractères et retourne la liste des longueurs de chaque chaîne.
+    - Par exemple: `["hello", "C#"]` retourne `[5, 2]`
 1. Définir un `record` `Person` avec les propriétés `Name` et `Age`. Créer une liste de personnes et:
     1. afficher les personnes dont l'âge est supérieur à 18 ans.
     1. afficher les personnes dont le nom commence par la lettre 'A'.
+    1. Créer une fonction qui change le nom en Camel case de chaque personne.
+        - Par exemple: `Person("john doe", 20)` devient `Person("John Doe", 20)`
+    1. Créer un fonction qui donne l'âge moyen des personnes.
 
 ### Partie 2
 
-Utiliser LINQ et ne pas utiliser `foreach`.
+Utiliser LINQ pour la partie algorithmie. Utiliser `foreach` uniquement pour l'affichage.
+
+1. Refaire les exos de la partie 1 avec LINQ.
 
 ## Fichiers
 
