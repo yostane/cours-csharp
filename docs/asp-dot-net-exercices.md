@@ -25,8 +25,14 @@
         ```
 
 ??? "Solutions"
-    ```cs
+    ```cs title="code"
     --8<--
     aspdotnet/ExercisesApi/Program.cs
+    --8<--
+    ```
+
+    ```http title="appels de test"
+    --8<--
+    aspdotnet/ExercisesApi/calls.http
     --8<--
     ```
