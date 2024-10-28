@@ -48,6 +48,21 @@ Utiliser `foreach` si besoin (et ne pas utiliser LINQ: Select, etc.):
 Utiliser LINQ pour la partie algorithmie. Utiliser `foreach` uniquement pour l'affichage.
 
 1. Refaire les exos de la partie 1 avec LINQ.
+1. Créer une fonction qui prend un entier n. La fonction génère une liste de n entiers aléatoires entre 0 et 100 et affiche le min, le max, la somme et la moyenne.
+    - Par exemple: si `n = 5` génère le tableau `[10, 20, 30, 40, 50]`, afficher `min: 10, max: 50, sum: 150, avg: 30`
+1. Créer une fonction qui prend une liste de chaînes de caractères et retourne la liste des chaînes de caractères triées par ordre croissant de longueur. (💡 utiliser `OrderBy((s) => s.Length)`).
+    - Par exemple: `["hello", "C#", "world"]` retourne `["C#", "hello", "world"]`
+1. Créer une fonction qui prend une liste de chaînes de caractères et retourne la liste des chaînes de caractères et retourne le nombre de caractères total de toutes les chaînes.
+    - Par exemple: `["hello", "C#", "world"]` retourne `10`
+1. Créer une fonction qui prend une liste de chaînes de caractères et retourne le nombre de mots qui ont une longueur supérieure à 3.
+    - Par exemple: `["hello", "C#", "world"]` retourne `2`
+1. Définir un `record` `Ninja` avec les propriétés `Name`, `Hp` et `IsHokage`. Créer une liste de ninjas et:
+    - Afficher les noms des Hokage.
+        - Par exemple: `Ninja("Naruto", 150, true)` et `Ninja("Sasuke", 120, false)` retourne `Naruto`
+    - Afficher le nombre de ninjas qui ont plus de 100 points de vie.
+        - Par exemple: `Ninja("Naruto", 150, true)` et `Ninja("Sasuke", 120, false)` retourne `2`
+    - Afficher le nom ninja qui a le plus de points de vie.
+        - Par exemple: `Ninja("Naruto", 150, true)` et `Ninja("Sasuke", 120, false)` retourne `Naruto`
 
 ??? "Corrections"
     ```cs
