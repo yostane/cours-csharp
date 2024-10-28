@@ -57,6 +57,14 @@ dotnet/collections/Program.cs
 --8<--
 ```
 
+## LINQ
+
+```cs
+--8<--
+dotnet/linq-demo/Program.cs
+--8<--
+```
+
 ## Fichiers
 
 - C# propose plusieurs façons de manipuler des fichiers
