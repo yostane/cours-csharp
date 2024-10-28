@@ -50,7 +50,7 @@ Utiliser LINQ pour la partie algorithmie. Utiliser `foreach` uniquement pour l'a
 1. Refaire les exos de la partie 1 avec LINQ.
 
 ??? "Corrections"
-    ```cs title="1"
+    ```cs
     --8<--
     dotnet/linq-exercices/Program.cs
     --8<--
