@@ -1,3 +1,5 @@
+using System.Reflection.Metadata.Ecma335;
+
 bool IsPalindromeAlgo(string input)
 {
   for (int i = 0; i < input.Length / 2; i++)
@@ -50,6 +52,15 @@ int ComputeExampleSchtroumpf()
   return ComputeSchtroumpf([4, 8, 7, 12], [3, 6]);
 }
 
+GradeResponse GenerateGradeResponse(int n = 10)
+{
+  var rng = new Random();
+  List<int> notes = Enumerable.Range(1, n).Select(_ => rng.Next(20)).ToList();
+  var avg = notes.Average();
+  int nbSup = notes.Where(note => note > avg).Count();
+  return new GradeResponse(notes, avg, nbSup);
+}
+
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
@@ -64,6 +75,11 @@ app.MapGet("/palindrome/{word}", (string word) => IsPalindromeAlgo(word) ? "Est 
 app.MapGet("/ez/palindrome/{word}", (string word) => IsPalindromeEz(word) ? "Est un palindrome" : "n'est pas un palindrome");
 app.MapGet("/schtroumpf/{nb1}/{nb2}", (int nb1, int nb2) => ComputeRandomSchtroumpf(nb1, nb2));
 app.MapGet("/example/schtroumpf/", () => ComputeExampleSchtroumpf());
+app.MapGet("/notes", GenerateGradeResponse);
+app.MapGet("/notes/{nb}", (int nb) => GenerateGradeResponse(nb));
+
 
 app.Run();
 
+
+record GradeResponse(List<int> Notes, double Moyenne, int NbNotesSupMoyenne);
