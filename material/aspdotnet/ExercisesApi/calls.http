@@ -1,5 +1,13 @@
 @base_url=http://localhost:5286
-
+###
+{{base_url}}/pair
+###
+{{base_url}}/pair/5
+###
+{{base_url}}/consonnes/hello
+###
+{{base_url}}/consonnes/aaabb
+###
 {{base_url}}/palindrome/elle
 ###
 {{base_url}}/palindrome/tintin

@@ -53,6 +53,13 @@ int ComputeExampleSchtroumpf()
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
+app.MapGet("/pair", () => Enumerable.Range(0, 11).Select(n => n * 2));
+app.MapGet("/pair/{nb}", (int nb) => Enumerable.Range(0, nb + 1).Select(n => n % 2 == 0));
+app.MapGet("/impair/{nb}", (int nb) => Enumerable.Range(0, nb + 1).Select(n => n % 2 != 0));
+app.MapGet("/consonnes/{mot}", (string mot) => mot.ToLower().Where(c => !"aiueoy".Contains(c)));
+app.MapGet("/longueur/{word}", (string word) => word.Length);
+
+
 app.MapGet("/palindrome/{word}", (string word) => IsPalindromeAlgo(word) ? "Est un palindrome" : "n'est pas un palindrome");
 app.MapGet("/ez/palindrome/{word}", (string word) => IsPalindromeEz(word) ? "Est un palindrome" : "n'est pas un palindrome");
 app.MapGet("/schtroumpf/{nb1}/{nb2}", (int nb1, int nb2) => ComputeRandomSchtroumpf(nb1, nb2));
