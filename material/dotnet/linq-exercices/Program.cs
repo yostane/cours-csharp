@@ -1,4 +1,8 @@
-﻿void RunQ1()
+﻿using System.Reflection.Metadata;
+using System.Reflection.PortableExecutable;
+using System.Text;
+
+void RunQ1()
 {
   void ShowEvenNumbers(List<int> numbers)
   {
@@ -49,6 +53,46 @@ void RunQ3()
   Console.WriteLine(GetConsonants2("aeae"));
 }
 
+void RunQ4()
+{
+  List<int> GetLengths(List<string> texts) =>
+    (from text in texts select text.Length).ToList();
+  Console.WriteLine("Exercise 4");
+  Console.WriteLine(string.Join(", ", GetLengths(["I", "Love", "C#"])));
+  Console.WriteLine(string.Join(", ", GetLengths(["LINQ", "Rocks"])));
+}
+
+void RunQ5()
+{
+  string ToCamelCaseName(string name)
+  {
+    var transformed = name.Select((c, index) => index == 0 || name[index - 1] == ' ' ? char.ToUpper(c) : c);
+    return string.Join("", transformed);
+  }
+  void PrintResults(List<Person> persons)
+  {
+    Console.WriteLine($"input list: {string.Join(",", persons)}");
+    var olderThan18 = persons.Where(p => p.Age > 18);
+    Console.WriteLine($"Older than 18: {string.Join(", ", olderThan18)}");
+    var startWithAPersons = from p in persons where p.Name.Length > 1 && p.Name[0] == 'A' select p;
+    Console.WriteLine($"Start with A: {string.Join(", ", startWithAPersons)}");
+    var camelCased = persons.Select(p => new Person(ToCamelCaseName(p.Name), p.Age));
+    Console.WriteLine($"Camel cased: {string.Join(", ", camelCased)}");
+  }
+  List<Person> persons = [new("Kakashi", 50), new("Arata", 23), new("j bap", 2)];
+  PrintResults(persons);
+  Random rng = new();
+  List<Person> randomPersons = Enumerable.Range(1, 5)
+    .Select(
+      i => new Person($"person number {i}", rng.Next(10, 30))
+    ).ToList();
+  PrintResults(randomPersons);
+}
+
 RunQ1();
 RunQ2();
 RunQ3();
+RunQ4();
+RunQ5();
+
+record Person(string Name, int Age);
