@@ -12,6 +12,7 @@ Console.WriteLine(string.Join(", ", resultNumbers));
 
 bool isOdd(int n) => n % 2 == 0;
 Func<int, bool> isOdd2 = n => n % 2 == 1;
+// LINQ Method syntax:
 var oddNumbers = numbers.Where(n => n % 2 == 1);
 var oddNumbers2 = numbers.Where(isOdd2);
 var oddNumbers3 = numbers.Where(isOdd);
@@ -26,3 +27,7 @@ Console.WriteLine(string.Join(", ", resultNumbers2));
 var resultNumbers3 = numbers.AsParallel()
                             .Where(n => n % 2 == 1)
                             .Select(n => n * 2);
+
+// LINQ query syntax: resultNumbers4 is translated (intenally) into resultNumbers2
+var resultNumbers4 = from n in numbers where n % 2 == 1 select n * 2;
+

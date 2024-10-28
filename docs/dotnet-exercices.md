@@ -49,6 +49,13 @@ Utiliser LINQ pour la partie algorithmie. Utiliser `foreach` uniquement pour l'a
 
 1. Refaire les exos de la partie 1 avec LINQ.
 
+??? "Corrections"
+    ```cs title="1"
+    --8<--
+    dotnet/linq-exercices/Program.cs
+    --8<--
+    ```
+
 ## Fichiers
 
 1. Utiliser les `StreamReader` et / ou `StreamWriter` pour lire et un fichier et:
