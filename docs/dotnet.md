@@ -51,6 +51,9 @@ Il faut aussi s’intéresser à son:
 
 ## Collections
 
+.Net fournit les types de collections courantes et des méthodes pour les manipuler.
+Il propose même des fonctionnalités intéressantes comme l'indexation à l'envers et par intervalle.
+
 ```cs
 --8<--
 dotnet/collections/Program.cs
@@ -58,6 +61,10 @@ dotnet/collections/Program.cs
 ```
 
 ## LINQ
+
+LINQ fournit des fonctions et des mots-clés permettant de manipuler des collections de données.
+LINQ est un acronyme pour **Language Integrated Query**.
+Deux syntaxes sont possible: la syntaxe de requête (ressemble à du SQL) et la syntaxe de méthode (ressemble aux méthodes fitler map et reduce qu'on trouve dans d'autres langages).
 
 ```cs
 --8<--

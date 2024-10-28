@@ -31,3 +31,14 @@ var resultNumbers3 = numbers.AsParallel()
 // LINQ query syntax: resultNumbers4 is translated (intenally) into resultNumbers2
 var resultNumbers4 = from n in numbers where n % 2 == 1 select n * 2;
 
+// Générer un tableau aléatoire de 6 entier
+Random rng = new();
+var randomNumbers = Enumerable.Range(1, 10).Select(n => rng.Next(-10, 10)).ToList();
+Console.WriteLine($"Random numbers {string.Join(", ", randomNumbers)}");
+Console.WriteLine(@$"
+Sum: {randomNumbers.Sum()} or {randomNumbers.Aggregate((agg, cur) => agg + cur)}
+Mutliply all elements: {randomNumbers.Aggregate(1, (agg, cur) => agg * cur)}
+Average: {randomNumbers.Average()}
+Max: {randomNumbers.Max()} or {randomNumbers.Aggregate((agg, cur) => agg > cur ? agg : cur)}
+Min: {randomNumbers.Min()} or {randomNumbers.Aggregate((agg, cur) => agg < cur ? agg : cur)}
+");
