@@ -1,7 +1,7 @@
-﻿static void PrintCountPerLine(String filePath)
+﻿static void PrintCountPerLine(string filePath)
 {
   using StreamReader sr = new(filePath);
-  String? line = sr.ReadLine();
+  string? line = sr.ReadLine();
   while (line != null)
   {
     Console.WriteLine(line.Length);
@@ -9,11 +9,11 @@
   }
 }
 
-static void AddDotIfNotPresent(String filePath)
+static void AddDotIfNotPresent(string filePath)
 {
   using StreamReader sr = new(filePath);
   using StreamWriter sw = new("dotted_file.txt");
-  String? line = sr.ReadLine();
+  string? line = sr.ReadLine();
   while (line != null)
   {
     if (!line.EndsWith('.'))
@@ -25,11 +25,11 @@ static void AddDotIfNotPresent(String filePath)
   }
 }
 
-static void WriteLongestLine(String filePath)
+static void WriteLongestLine(string filePath)
 {
   using StreamReader sr = new(filePath);
-  String? line = sr.ReadLine();
-  String? longestLine = line;
+  string? line = sr.ReadLine();
+  string? longestLine = line;
   while (line != null)
   {
     line = sr.ReadLine();
@@ -45,7 +45,7 @@ static void WriteLongestLine(String filePath)
   }
 }
 
-String filePath = "input_file.txt";
+string filePath = "input_file.txt";
 PrintCountPerLine(filePath);
 AddDotIfNotPresent(filePath);
 WriteLongestLine(filePath);
