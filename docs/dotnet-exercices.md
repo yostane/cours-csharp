@@ -80,7 +80,6 @@ Utiliser LINQ pour la partie algorithmie. Utiliser `foreach` uniquement pour l'a
     - Génère un fichier qui contient les lignes du fichier lu triés par ordre croissant le nombre de caractères de la ligne
     - Génère un fichier qui contient les lignes du fichier lu triés par ordre croissant du dictionnaire
 1. Utiliser un `StreamWriter` pour écrire dans un fichier le contenu d'une chaîne de caractères au format pyramidal. Par exemple "Je-fais-des-exos-de-C#" donne le fichier (le dernier caractère sera ignoré car il ne permet pas de faire une pyramide):
-
     ```txt
     J
     e-
@@ -89,8 +88,7 @@ Utiliser LINQ pour la partie algorithmie. Utiliser `foreach` uniquement pour l'a
     s-exo
     s-de-C
     ```
-
-1. Définir votre propose classe de journalisation (`Logger`) qui va servrir à écrire des logs dans un fichier.
+1. Définir votre propose classe de journalisation (`Logger`) qui va servir à écrire des logs dans un fichier.
     - La classe prend en argument du constructeur le nom du fichier de logs
     - La classe propose les méthodes: `Info(String message)` et `Warn(String message)`. Chacune des méthodes ajoute une ligne au fichier avec le format:
         - Si c'est une Info: `{date et heure actuelle} ℹ️ {message}`
@@ -100,14 +98,21 @@ Utiliser LINQ pour la partie algorithmie. Utiliser `foreach` uniquement pour l'a
     - Ajouter les méthodes `Error(String message)` et `Debug(String message)` avec un format adapté et basé sur le même principe que les méthodes définies plus haut.
     - Définir une méthode `ShowAllWarnings()` qui affiche tous les logs de type `Warn` présents dans le fichier de log.
     - Est-ce que vous voyez des inconvénients / contraintes avec cette méthode de journalisation ?
+1. Faire le [problème 1 de advent of code 2023](https://adventofcode.com/2023/day/1) en chargeant les données d'entrée depuis un fichier.
+    - Par exemple pour l'exercice 1 du problème, créer à la main (avec vscode ou l'explorateur) un fichier `input1.txt` avec le contenu ci-dessous et le lire avec un StreamReader pour résoudre le problème.
+    ```txt
+    1abc2
+    pqr3stu8vwx
+    a1b2c3d4e5f
+    treb7uchet
+    ```
 
-## Corrections série 1
-
-```cs title="Correction"
---8<--
-file_exo/Program.cs
---8<--
-```
+??? "Corrections"
+    ```cs 
+    --8<--
+    file_exo/Program.cs
+    --8<--
+    ```
 
 ## Série 2 (programmation asynchrone)
 
